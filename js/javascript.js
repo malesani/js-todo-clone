@@ -16,9 +16,12 @@ $(document).ready(function(){
   }
 
   $(document).on("click",".fa-trash", function(){
-    $(this).parent().$(.remove();
+    $(this).parent().remove();
   })
 
-
+  $("main input").keyup(function(event) { 
+    console.log(event.wich);
+    
+  });
 
 })
