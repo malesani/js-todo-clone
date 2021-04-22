@@ -20,7 +20,17 @@ $(document).ready(function(){
   })
 
   $("main input").keyup(function(event) { 
-    console.log(event.wich);
+    if(event.which === 13){
+      var todo = $(this).val().trim();
+      console.log(todo)
+      if(todo.length > 3){
+        var item = $(".template li").clone();
+        console.log(item)
+        $(item).find(".text").append(todo)
+        $("ul").append(item);
+      }
+      
+    };
     
   });
 
